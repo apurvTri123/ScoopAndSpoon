@@ -1,0 +1,20 @@
+<div class="card" >
+  <img mat-card-image class='imglarge ' src={{details.imageUrl}} alt="Image not available">
+  <div class="card-body">
+    <p class="font-weight-bold">{{details.name}}</p>
+    
+    <span class="text-justify">
+      <p>{{details.description}}</p>
+      <p>{{details.company}}</p>
+      <p>{{details.latitude}}</p>
+      <p>{{details.longitude}}</p>
+    </span>
+
+    <span class="font-weight-bold">Tags
+      <li *ngFor="let tag of tags">{{tag}} </li>
+    </span>
+
+    <button class="btn btn-dark" (click)="goBack()">go back</button>
+
+  </div>
+</div>

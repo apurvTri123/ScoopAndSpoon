@@ -1,0 +1,37 @@
+@import "../../../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css";
+.imgCard{
+    max-width: 100px;
+    margin-left: 0%;
+}
+.searchBox{
+  width: 43%;
+  margin-left: 25%;
+  box-shadow: 1px 1px 1px 0px 1 black;
+  margin-top: 2%;
+}
+.errorMessage{
+  font-weight: bold;
+  color: red;
+  margin: 3%;
+  font-size: 5vh;
+}
+.details{   
+    margin:1%;
+    padding: 15px;
+    height:45vh;
+    overflow: visible;   
+    box-shadow: 1px 1px 1px 0px 1 black;
+}
+.textDescription{
+  padding:2px;
+}
+.clickable{
+  cursor: pointer;
+}
+.searchbutton{
+  margin:1%;
+  border-radius: 1rem;
+
+}
+ 
+  

@@ -1,0 +1,44 @@
+<div  *ngIf="!results.error">
+  <input (keydown.enter)=executeSearch() [(ngModel)]="searchTerm" class="searchBox " type="text" placeholder="Search" />
+  <button class="searchbutton"  (click)=executeSearch()>Search</button>
+</div>
+
+<div class="errorMessage" *ngIf="results.error">{{results.error}}</div>
+
+<div >
+  <div class="row ">
+    <div class="col-sm-6 col-md-6 col-lg-4" *ngFor="let res of displaycards">
+      
+      <div class="card details" >
+      <div class="row">
+        <div class="col-sm-10 clickable" (click)=loadDetails(res.id)>
+          <p class="font-weight-bold">{{res.name}}</p>
+              <img mat-card-image class='imgCard' src={{res.imageUrl}} alt="Image not available">
+              <p class="textDescription">{{res.description}}</p>
+        </div>
+        <div class="col-sm-2">
+          <mat-icon aria-hidden="false"class="clickable" (click)="removeEntry(res)">close</mat-icon>
+        </div>
+
+      </div>
+        
+      </div>
+
+
+      <!-- <mat-card class="details">
+        <div class="row">
+          <div class="col-sm-10 col-lg-11">
+            <mat-card-content (click)=loadDetails(res.id)>
+              <p class="font-weight-bold">{{res.name}}</p>
+              <img mat-card-image class='imgCard' src={{res.imageUrl}} alt="Image not available">
+              <p>{{res.description}}</p>
+            </mat-card-content>
+          </div>
+          <div class="col-sm-2 col-lg-1">
+            <mat-icon aria-hidden="false" (click)="removeEntry(res)">close</mat-icon>
+          </div>
+        </div>
+      </mat-card> -->
+    </div>
+  </div>
+</div>
